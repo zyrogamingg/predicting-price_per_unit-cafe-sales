@@ -31,6 +31,9 @@ if st.button("predict"):
         "year": year
         
     }])
+    prediction = final_model.predict(input_df)
+    print(prediction)
+    st.write("prediction",prediction)
 
 if st.button("Predict Price per Unit"):
     predicted_price = total_spent / quantity
